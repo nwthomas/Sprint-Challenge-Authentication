@@ -39,9 +39,14 @@ function register(req, res) {
   db("users")
     .insert(newUser)
     .then(response => {
+      const token = generateToken(newUser);
       res
         .status(200)
-        .json({ message: "New account created successfully.", response });
+        .json({
+          message: "New account created successfully.",
+          response,
+          token
+        });
     })
     .catch(error => {
       res.status(500).json({
