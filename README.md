@@ -29,42 +29,53 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
-1. What does bcrypt do to help us store passwords in a secure manner.
-1. What does bcrypt do to slow down attackers?
-1. What are the three parts of the JSON Web Token?
+
+A session allows data to persist across requests; when you use sessions, there's no need to re-enter credentials on every new request that the client makes to the server.
+
+2. What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt.js allows us to hash our seeded data and new data passwords so that we don't have to store the passwords on the server as a plain text string (which is a horrible idea). By implementing multiple hashes of our single passwords, we can effectively slow down any hacker that might somehow gain access to this data.
+
+3. What does bcrypt do to slow down attackers?
+
+By hashing passwords multiple times, bcrypt slows down hackers that might gain access to your password; the attacker will have to brute-force their way through the hashing using something like a rainbow table, and this can take months or years (if your password is very secure). If you change your password periodically, you've effectively locked them out from accessing your account.
+
+4. What are the three parts of the JSON Web Token?
+
+The three parts of a JSON Web Token are the header (with the algorithm/type), the payload (which contains the name), and the signature (which contains the secret you used to create the token).
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] `cd` into the root of the project and run `yarn` to install dependencies.
-- [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] `cd` into the root of the project and run `yarn` to install dependencies.
+- [x] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request
+- [x] PM then will count the HW as done by merging the branch back into master.
 
 Helpful Tip on Testing this Project:
 
-- [ ] **TEST** this project using **`POSTMAN`**.
+- [x] **TEST** this project using **`POSTMAN`**.
 
 ## Minimum Viable Product
 
-- [ ] Implement the `register` function inside `/config/routes.js`.
-- [ ] Implement the `login` function inside `/config/routes.js`.
-- [ ] Use JSON Web Tokens for authentication.
+- [x] Implement the `register` function inside `/config/routes.js`.
+- [x] Implement the `login` function inside `/config/routes.js`.
+- [x] Use JSON Web Tokens for authentication.
 
 **Note** The migrations and a database with empty users is already included
 
-- [ ] Add the authentication related code. If every is done correctly, visiting `/api/jokes` should return a list of jokes.
+- [x] Add the authentication related code. If every is done correctly, visiting `/api/jokes` should return a list of jokes.
 
 ## Stretch Problem: Build a front end to interface with your User Auth System
 
