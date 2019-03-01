@@ -32,27 +32,28 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 A session allows data to persist across requests; when you use sessions, there's no need to re-enter credentials on every new request that the client makes to the server.
 
-1. What does bcrypt do to help us store passwords in a secure manner.
+2. What does bcrypt do to help us store passwords in a secure manner.
 
-bcrypt.js
+bcrypt.js allows us to hash our seeded data and new data passwords so that we don't have to store the passwords on the server as a plain text string (which is a horrible idea). By implementing multiple hashes of our single passwords, we can effectively slow down any hacker that might somehow gain access to this data.
 
-1. What does bcrypt do to slow down attackers?
-1. What are the three parts of the JSON Web Token?
+3. What does bcrypt do to slow down attackers?
+
+4. What are the three parts of the JSON Web Token?
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] `cd` into the root of the project and run `yarn` to install dependencies.
+- [x] `cd` into the root of the project and run `yarn` to install dependencies.
 - [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
