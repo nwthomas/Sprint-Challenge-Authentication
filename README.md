@@ -42,6 +42,8 @@ By hashing passwords multiple times, bcrypt slows down hackers that might gain a
 
 4. What are the three parts of the JSON Web Token?
 
+The three parts of a JSON Web Token are the header (with the algorithm/type), the payload (which contains the name), and the signature (which contains the secret you used to create the token).
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
