@@ -38,6 +38,8 @@ bcrypt.js allows us to hash our seeded data and new data passwords so that we do
 
 3. What does bcrypt do to slow down attackers?
 
+By hashing passwords multiple times, bcrypt slows down hackers that might gain access to your password; the attacker will have to brute-force their way through the hashing using something like a rainbow table, and this can take months or years (if your password is very secure). If you change your password periodically, you've effectively locked them out from accessing your account.
+
 4. What are the three parts of the JSON Web Token?
 
 ## Project Set Up
