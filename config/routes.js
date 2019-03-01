@@ -51,8 +51,21 @@ function register(req, res) {
     });
 }
 
-function login(req, res) {
-  // implement user login
+async function login(req, res) {
+  const creds = req.body;
+  const user = await db("users")
+    .where({ username: creds.username })
+    .first();
+  if (user && bcrypt.compareSync(creds.password, user.password)) {
+    const token = generateToken(user);
+    res
+      .status(200)
+      .json({ message: "The user was logged in successfully.", token });
+  } else {
+    res
+      .tatus(401)
+      .json({ message: "Error. Invalid credentials. Please try again." });
+  }
 }
 
 function getJokes(req, res) {
